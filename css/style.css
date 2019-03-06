@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr 80px;
+  grid-template-columns: 1fr minmax(auto, 1024px) 1fr;
+  grid-template-areas: "header  header  header"
+  "  .      main      .  "
+  "footer  footer  footer";
+  min-height: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-image: url(../images/bg.jpg);
+}
+
+section{
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+pre{
+  font-family: "Courier New", "Lucida Console", monospace;
+}
+
+p{
+  padding: 10px;
+}
+
+ul.hr li{
+  display: inline;
+  margin-right: 30px;
+  white-space: nowrap;
+}
+
+ul.hr a{
+  text-decoration: none;
+  color: darkblue;
+}
+
+header, main, footer {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 150%;
+  background-color: rgba(250, 121, 226, 0.7);
+}
+
+main {
+  grid-area: main;
+  background-color: rgba(200, 200, 255, 0.7);
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(100, 0, 255, 0.5);
+}
+
+footer p {
+  padding: 0;
+}
+
+.code {
+  padding-top: 10px;
+  background-color: blanchedalmond;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.logo{
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 1024px;
+  margin: auto;
+  padding-left: 30px;
+}
+
+.img-logo {
+  width: 296px;
+  height: 41px;
+}
+
+.img-dev {
+  width: 200px;
+  height: 300px;
+}
+
+@media (max-width: 1080px){
+  .img-logo {
+    margin: auto 20px;
+  }
+}
+
+@media (max-width: 900px){
+  .img-logo {
+    margin: auto 20px;
+  }
+  .logo{
+    flex-wrap: wrap;
+  }
+  ul.hr li{
+    display: block;
+  }
+}
+
+
+

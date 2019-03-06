@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CV Marina Chichel</title>
+  <link rel="stylesheet"  href="css/style.css">
+</head>
+
+<body>
+<header>
+  <div class="logo">
+    <img class="img-logo" src="images/Marina.png" alt="Developer name">
+    <nav>
+      <ul class="hr">
+        <li><a href="#personal-information">Personal information</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#code-examples">Code examples</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#english-level">English level</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <h1>Resume</h1>
+
+  <section id="personal-information">
+    <img  class="img-dev" src="images/foto-1.JPG" alt="Developer photo">
+    <h2>Personal information</h2>
+    <p>Marina Chichel</p>
+    <p>Date of birth: 28.04.1984</p>
+  </section>
+
+  <section id="contacts">
+    <h2>Contacts</h2>
+    <p>Mobile: +7(921)327-90-40</p>
+    <p>E-mail: bmvmarc@gmail.com</p>
+    <p>Skype: bmv_marinka</p>
+  </section>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>I have been working as a 1c programmer for 8 years. At first it was interesting, but recently it has become
+      boring. I like programming, but I got bored because I already know everything in this area. It seemed to me
+      that the projects were the same, the tasks were the same. And I love change. I am always for diversity. And
+      I love to learn something new. So I decided to change the direction of my work and go into web programming.
+      It's so exciting, and I'm ready to grow!</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>1C, SQL, C#</p>
+  </section>
+
+  <section id="code-examples">
+    <h2>Code examples</h2>
+    <section class="code">
+          <pre>
+            module.exports = function warmup(temperature) {
+              return 9/5*temperature + 32;
+            };
+          </pre>
+    </section>
+
+    <section class="code">
+          <pre>
+            function doIt(matr) {
+              let opt;
+              for (let r = 0; r &lt; 9; r++) {
+                for (let c = 0; c &lt; 9; c++) {
+                  if (matr[r][c] === 0) {
+                    opt = getProbableOptions(r, c, matr);
+                    if (opt.length === 1) {
+                      matr[r][c] = opt[0];
+                    }
+                    else if (opt.length === 0) {
+                      return [matr, false];
+                    }
+                    else {
+                      let returned;
+                      for(let i = 0; i &lt; opt.length; i++){
+                        let matrtemp = clone(matr);
+                        matrtemp[r][c] = opt[i];
+                        returned = doIt(matrtemp);
+                        if (returned[1]){
+                          matr = clone(returned[0]);
+                          return [matr, true];
+                        }
+                      }
+                      return [matr, returned[1]];
+                    }
+                  }
+                }
+              }
+              return [matr, true];
+            }
+          </pre>
+    </section>
+
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>I have experience in the development and implementation 1c projects in enterprise management, retail pharmacies.
+      support and changing applications in large enterprises.
+      I also wrote C# trading robots using third-party libraries.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>Educational institution: Polotsk State University, Belarus</p>
+  </section>
+
+  <section id="english-level">
+    <h2>English level</h2>
+    <p>My level is intermediate.<br>
+      I started learning from the <a href="https://www.duolingo.com">Duolingo application</a><br>
+      Then I studied for about six months using <a href="https://puzzle-english.com">Puzzle English</a><br>
+      Now I go to English school <a href="https://vk.com/dyb17">Do your best</a><br>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Marina Chichel, 2019</p>
+</footer>
+
+</body>
+</html>
+
